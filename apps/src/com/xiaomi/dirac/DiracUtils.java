@@ -55,10 +55,7 @@ public final class DiracUtils {
 
     public void onBootCompleted() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mContext);
-        if (sp.getBoolean(PREF_SETUP_FINISHED, false)) {
-            setEnabled(mDiracSound.getMusic() == 1);
-        } else {
-            // Enable Dirac when boot up first time
+            // Enable Dirac on every boot
             setEnabled(true);
             sp.edit().putBoolean(PREF_SETUP_FINISHED, true).apply();
         }
