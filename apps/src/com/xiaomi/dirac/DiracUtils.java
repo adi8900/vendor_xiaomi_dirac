@@ -58,7 +58,6 @@ public final class DiracUtils {
             // Enable Dirac on every boot
             setEnabled(true);
             sp.edit().putBoolean(PREF_SETUP_FINISHED, true).apply();
-        }
         mDiracSound.setHeadsetType(mDiracSound.getHeadsetType());
         setLevel(getLevel());
         mInstance = this;
